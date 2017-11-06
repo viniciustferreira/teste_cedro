@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pratos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Restaurante</th>
+      <th>Nome</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pratos.each do |prato| %>
+      <tr>
+        <td><%= prato.nome_restaurante %></td>
+        <td><%= prato.nome %></td>
+        <td><%= prato.preco %></td>
+        <td><%= link_to 'Mostrar', prato %></td>
+        <td><%= link_to 'Editar', edit_prato_path(prato) %></td>
+        <td><%= link_to 'Apagar', prato, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Prato', new_prato_path %>

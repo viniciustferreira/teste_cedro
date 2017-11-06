@@ -1,0 +1,12 @@
+Olá.
+
+Essa aplicação não está completamente de acordo com a especificação. Eu não conheço Angular, sou
+mais voltado para o back-end, portanto o a busca de restaurantes foi feita com Ajax, mas o restante
+acredito que está conforme conversado.
+
+É necessário instalar o JQuery antes de rodar os testes ou mesmo subir o servidor.
+
+Por favor entrem em contato em caso de dúvida.
+
+Obrigado
+Att.

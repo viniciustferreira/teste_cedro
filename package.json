@@ -1,0 +1,7 @@
+{
+  "name": "sistema_de_restaurantes",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurantes.each do |restaurante| %>
+      <tr>
+        <td><%= restaurante.nome %></td>
+        <td><%= link_to 'Mostrar', restaurante %></td>
+        <td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
+        <td><%= link_to 'Apagar', restaurante, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

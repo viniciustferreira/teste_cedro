@@ -1,0 +1,8 @@
+<%= form_tag(restaurantes_path, method: 'get', remote: true) do %>
+  <fieldset>
+  <legend>Filtro</legend>
+    <%= text_field_tag :nome, params[:nome] %>
+    <%= submit_tag 'Procurar', id: 'search' %>
+  </fieldset>
+  <div id="result"><%= render 'result' %></div>
+<% end %>

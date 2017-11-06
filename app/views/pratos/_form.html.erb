@@ -1,0 +1,35 @@
+<fieldset>
+  <legend>Dados</legend>
+  <%= form_with(model: prato, local: true) do |form| %>
+    <% if prato.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(prato.errors.count, "error") %> prohibited this prato from being saved:</h2>
+
+        <ul>
+        <% prato.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :restaurante_id %>
+      <%= form.select :restaurante_id, options_for_select(@restaurantes || []), { include_blank: false, multiple: true, size: 10 } %> 
+    </div>
+
+    <div class="field">
+      <%= form.label :nome %>
+      <%= form.text_field :nome, id: :prato_nome %>
+    </div>
+
+    <div class="field">
+      <%= form.label :preco %>
+      <%= form.text_field :preco, id: :prato_preco %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</fieldset>
